@@ -1,0 +1,148 @@
+{
+  "name": "three-nodes",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-3aa48b95fe0c",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMKxz9DU7TvF3tNqJ7W2hgf7MntEGpLtpqoDUqyi+WYC"],
+  "nodes": {
+    "srl1": {
+      "index": "0",
+      "shortname": "srl1",
+      "longname": "clab-three-nodes-srl1",
+      "fqdn": "srl1.three-nodes.io",
+      "group": "",
+      "labdir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-three-nodes/srl1",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:0c:00:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3aa48b95fe0c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-three-nodes/srl1",
+        "clab-node-longname": "clab-three-nodes-srl1",
+        "clab-node-name": "srl1",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "jlew",
+        "clab-topo-file": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/three-node.clab.yml",
+        "containerlab": "three-nodes"
+      },
+      "port-bindings": [
+      ]
+    },
+    "srl2": {
+      "index": "1",
+      "shortname": "srl2",
+      "longname": "clab-three-nodes-srl2",
+      "fqdn": "srl2.three-nodes.io",
+      "group": "",
+      "labdir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-three-nodes/srl2",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:71:01:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3aa48b95fe0c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-three-nodes/srl2",
+        "clab-node-longname": "clab-three-nodes-srl2",
+        "clab-node-name": "srl2",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "jlew",
+        "clab-topo-file": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/three-node.clab.yml",
+        "containerlab": "three-nodes"
+      },
+      "port-bindings": [
+      ]
+    },
+    "srl3": {
+      "index": "2",
+      "shortname": "srl3",
+      "longname": "clab-three-nodes-srl3",
+      "fqdn": "srl3.three-nodes.io",
+      "group": "",
+      "labdir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-three-nodes/srl3",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:75:02:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3aa48b95fe0c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-three-nodes/srl3",
+        "clab-node-longname": "clab-three-nodes-srl3",
+        "clab-node-name": "srl3",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "jlew",
+        "clab-topo-file": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/three-node.clab.yml",
+        "containerlab": "three-nodes"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "srl1",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:55:9d:66",
+          "peer": "z"
+        },
+        "z": {
+          "node": "srl2",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:c0:7f:15",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "srl2",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:dd:47:d7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "srl3",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:24:32:dc",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

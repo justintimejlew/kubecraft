@@ -1,0 +1,101 @@
+{
+  "name": "mixed-topo",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-3aa48b95fe0c",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMKxz9DU7TvF3tNqJ7W2hgf7MntEGpLtpqoDUqyi+WYC"],
+  "nodes": {
+    "host1": {
+      "index": "0",
+      "shortname": "host1",
+      "longname": "clab-mixed-topo-host1",
+      "fqdn": "host1.mixed-topo.io",
+      "group": "",
+      "labdir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-mixed-topo/host1",
+      "kind": "linux",
+      "image": "alpine:3.20",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3aa48b95fe0c",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-mixed-topo/host1",
+        "clab-node-longname": "clab-mixed-topo-host1",
+        "clab-node-name": "host1",
+        "clab-node-type": "",
+        "clab-owner": "jlew",
+        "clab-topo-file": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/mixed-topology.clab.yml",
+        "containerlab": "mixed-topo"
+      },
+      "port-bindings": [
+      ]
+    },
+    "router": {
+      "index": "1",
+      "shortname": "router",
+      "longname": "clab-mixed-topo-router",
+      "fqdn": "router.mixed-topo.io",
+      "group": "",
+      "labdir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-mixed-topo/router",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:ac:01:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3aa48b95fe0c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-mixed-topo/router",
+        "clab-node-longname": "clab-mixed-topo-router",
+        "clab-node-name": "router",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "jlew",
+        "clab-topo-file": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/mixed-topology.clab.yml",
+        "containerlab": "mixed-topo"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "router",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:9c:15:e8",
+          "peer": "z"
+        },
+        "z": {
+          "node": "host1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:dd:24:07",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+# scalar sysDescr
+# config file  : /opt/srlinux/snmp/scripts/snmpv2_mib.yaml
+# python-script: /opt/srlinux/snmp/scripts/snmpv2_mib.py
+           : sysDescr                            .1.3.6.1.2.1.1.1                              octet string
+
+# scalar sysObjectID
+# config file  : /opt/srlinux/snmp/scripts/snmpv2_mib.yaml
+# python-script: none (hardcoded)
+           : sysObjectID                         .1.3.6.1.2.1.1.2                              object identifier
+
+# scalar sysUpTime
+# config file  : /opt/srlinux/snmp/scripts/snmpv2_mib.yaml
+# python-script: none (hardcoded)
+           : sysUpTime                           .1.3.6.1.2.1.1.3                              timeticks
+
+# scalar sysContact
+# config file  : /opt/srlinux/snmp/scripts/snmpv2_mib.yaml
+# python-script: /opt/srlinux/snmp/scripts/snmpv2_mib.py
+           : sysContact                          .1.3.6.1.2.1.1.4                              octet string
+
+# scalar sysName
+# config file  : /opt/srlinux/snmp/scripts/snmpv2_mib.yaml
+# python-script: /opt/srlinux/snmp/scripts/snmpv2_mib.py
+           : sysName                             .1.3.6.1.2.1.1.5                              octet string
+
+# scalar sysLocation
+# config file  : /opt/srlinux/snmp/scripts/snmpv2_mib.yaml
+# python-script: /opt/srlinux/snmp/scripts/snmpv2_mib.py
+           : sysLocation                         .1.3.6.1.2.1.1.6                              octet string
+
+# scalar sysServices
+# config file  : /opt/srlinux/snmp/scripts/snmpv2_mib.yaml
+# python-script: /opt/srlinux/snmp/scripts/snmpv2_mib.py
+           : sysServices                         .1.3.6.1.2.1.1.7                              integer32
+
+# scalar sysORLastChange
+# config file  : /opt/srlinux/snmp/scripts/snmpv2_mib.yaml
+# python-script: none (hardcoded)
+           : sysORLastChange                     .1.3.6.1.2.1.1.8                              timeticks
+
+# table sysORTable (.1.3.6.1.2.1.1.9)
+# config file  : /opt/srlinux/snmp/scripts/snmpv2_mib.yaml
+# python-script: none (hardcoded)
+Index    1 : sysORIndex                          (not-accessible)                              integer32
+Column   2 : sysORID                             .1.3.6.1.2.1.1.9.1.2                          object identifier
+Column   3 : sysORDescr                          .1.3.6.1.2.1.1.9.1.3                          octet string
+Column   4 : sysORUpTime                         .1.3.6.1.2.1.1.9.1.4                          timeticks
+
+# scalar ifNumber
+# config file  : /opt/srlinux/snmp/scripts/if_mib.yaml
+# python-script: /opt/srlinux/snmp/scripts/if_mib.py
+           : ifNumber                            .1.3.6.1.2.1.2.1                              integer32
+
+# table ifTable (.1.3.6.1.2.1.2.2)
+# config file  : /opt/srlinux/snmp/scripts/if_mib.yaml
+# python-script: /opt/srlinux/snmp/scripts/if_mib.py
+Index    1 : ifIndex                             .1.3.6.1.2.1.2.2.1.1                          integer32
+Column   1 : ifIndex                             .1.3.6.1.2.1.2.2.1.1                          integer32
+Column   2 : ifDescr                             .1.3.6.1.2.1.2.2.1.2                          octet string
+Column   3 : ifType                              .1.3.6.1.2.1.2.2.1.3                          integer32
+Column   4 : ifMtu                               .1.3.6.1.2.1.2.2.1.4                          integer32
+Column   5 : ifSpeed                             .1.3.6.1.2.1.2.2.1.5                          unsigned32
+Column   6 : ifPhysAddress                       .1.3.6.1.2.1.2.2.1.6                          octet string (binary)
+Column   7 : ifAdminStatus                       .1.3.6.1.2.1.2.2.1.7                          integer32
+Column   8 : ifOperStatus                        .1.3.6.1.2.1.2.2.1.8                          integer32
+Column   9 : ifLastChange                        .1.3.6.1.2.1.2.2.1.9                          timeticks
+Column  10 : ifInOctets                          .1.3.6.1.2.1.2.2.1.10                         counter32
+Column  11 : ifInUcastPkts                       .1.3.6.1.2.1.2.2.1.11                         counter32
+Column  12 : ifInNUcastPkts                      .1.3.6.1.2.1.2.2.1.12                         counter32
+Column  13 : ifInDiscards                        .1.3.6.1.2.1.2.2.1.13                         counter32
+Column  14 : ifInErrors                          .1.3.6.1.2.1.2.2.1.14                         counter32
+Column  15 : ifInUnknownProtos                   .1.3.6.1.2.1.2.2.1.15                         counter32
+Column  16 : ifOutOctets                         .1.3.6.1.2.1.2.2.1.16                         counter32
+Column  17 : ifOutUcastPkts                      .1.3.6.1.2.1.2.2.1.17                         counter32
+Column  18 : ifOutNUcastPkts                     .1.3.6.1.2.1.2.2.1.18                         counter32
+Column  19 : ifOutDiscards                       .1.3.6.1.2.1.2.2.1.19                         counter32
+Column  20 : ifOutErrors                         .1.3.6.1.2.1.2.2.1.20                         counter32
+Column  21 : ifOutQLen                           .1.3.6.1.2.1.2.2.1.21                         unsigned32
+Column  22 : ifSpecific                          .1.3.6.1.2.1.2.2.1.22                         object identifier
+
+# table ifXTable (.1.3.6.1.2.1.31.1.1) - augments ifTable
+# config file  : /opt/srlinux/snmp/scripts/if_mib.yaml
+# python-script: /opt/srlinux/snmp/scripts/if_mib.py
+Index    - : ifIndex                             (augmented)                                   integer32
+Column   1 : ifName                              .1.3.6.1.2.1.31.1.1.1.1                       octet string
+Column   2 : ifInMulticastPkts                   .1.3.6.1.2.1.31.1.1.1.2                       counter32
+Column   3 : ifInBroadcastPkts                   .1.3.6.1.2.1.31.1.1.1.3                       counter32
+Column   4 : ifOutMulticastPkts                  .1.3.6.1.2.1.31.1.1.1.4                       counter32
+Column   5 : ifOutBroadcastPkts                  .1.3.6.1.2.1.31.1.1.1.5                       counter32
+Column   6 : ifHcInOctets                        .1.3.6.1.2.1.31.1.1.1.6                       counter64
+Column   7 : ifHcInUcastPkts                     .1.3.6.1.2.1.31.1.1.1.7                       counter64
+Column   8 : ifHcInMulticastPkts                 .1.3.6.1.2.1.31.1.1.1.8                       counter64
+Column   9 : ifHcInBroadcastPkts                 .1.3.6.1.2.1.31.1.1.1.9                       counter64
+Column  10 : ifHcOutOctets                       .1.3.6.1.2.1.31.1.1.1.10                      counter64
+Column  11 : ifHcOutUcastPkts                    .1.3.6.1.2.1.31.1.1.1.11                      counter64
+Column  12 : ifHcOutMulticastPkts                .1.3.6.1.2.1.31.1.1.1.12                      counter64
+Column  13 : ifHcOutBroadcastPkts                .1.3.6.1.2.1.31.1.1.1.13                      counter64
+Column  14 : ifLinkUpDownTrapEnable              .1.3.6.1.2.1.31.1.1.1.14                      integer32
+Column  15 : ifHighSpeed                         .1.3.6.1.2.1.31.1.1.1.15                      unsigned32
+Column  16 : ifPromiscuousMode                   .1.3.6.1.2.1.31.1.1.1.16                      integer32
+Column  17 : ifConnectorPresent                  .1.3.6.1.2.1.31.1.1.1.17                      integer32
+Column  18 : ifAlias                             .1.3.6.1.2.1.31.1.1.1.18                      octet string
+Column  19 : ifCounterDiscontinuityTime          .1.3.6.1.2.1.31.1.1.1.19                      timeticks
+
+# table ifStackTable (.1.3.6.1.2.1.31.1.2)
+# config file  : /opt/srlinux/snmp/scripts/if_mib.yaml
+# python-script: /opt/srlinux/snmp/scripts/if_mib.py
+Index    1 : ifStackHigherLayer                  (not-accessible)                              integer32
+Index    2 : ifStackLowerLayer                   (not-accessible)                              integer32
+Column   3 : ifStackStatus                       .1.3.6.1.2.1.31.1.2.1.3                       integer32
+
+# scalar ifTableLastChange
+# config file  : /opt/srlinux/snmp/scripts/if_mib.yaml
+# python-script: /opt/srlinux/snmp/scripts/if_mib.py
+           : ifTableLastChange                   .1.3.6.1.2.1.31.1.5                           timeticks
+
+# scalar sgiCpuUsage
+# config file  : /opt/srlinux/snmp/scripts/timetra_system.yaml
+# python-script: /opt/srlinux/snmp/scripts/timetra_system.py
+           : sgiCpuUsage                         .1.3.6.1.4.1.6527.3.1.2.1.1.1                 unsigned32
+
+# scalar sgiMemoryUsed
+# config file  : /opt/srlinux/snmp/scripts/timetra_system.yaml
+# python-script: /opt/srlinux/snmp/scripts/timetra_system.py
+           : sgiMemoryUsed                       .1.3.6.1.4.1.6527.3.1.2.1.1.2                 unsigned32
+
+# scalar sgiMemoryAvailable
+# config file  : /opt/srlinux/snmp/scripts/timetra_system.yaml
+# python-script: /opt/srlinux/snmp/scripts/timetra_system.py
+           : sgiMemoryAvailable                  .1.3.6.1.4.1.6527.3.1.2.1.1.3                 unsigned32
+
+# scalar sgiKbMemoryUsed
+# config file  : /opt/srlinux/snmp/scripts/timetra_system.yaml
+# python-script: /opt/srlinux/snmp/scripts/timetra_system.py
+           : sgiKbMemoryUsed                     .1.3.6.1.4.1.6527.3.1.2.1.1.9                 unsigned32
+
+# scalar sgiKbMemoryAvailable
+# config file  : /opt/srlinux/snmp/scripts/timetra_system.yaml
+# python-script: /opt/srlinux/snmp/scripts/timetra_system.py
+           : sgiKbMemoryAvailable                .1.3.6.1.4.1.6527.3.1.2.1.1.10                unsigned32
+
+# table tmnxHwTable (.1.3.6.1.4.1.6527.3.1.2.2.1.8)
+# config file  : /opt/srlinux/snmp/scripts/timetra_chassis.yaml
+# python-script: /opt/srlinux/snmp/scripts/timetra_chassis.py
+Index    - : tmnxChassisIndex                    (none)                                        integer32
+Index    1 : tmnxHwIndex                         (not-accessible)                              integer32
+Column   2 : tmnxHwID                            .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.2             object identifier
+Column   3 : tmnxHwMfgString                     .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.3             octet string
+Column   4 : tmnxHwMfgBoardNumber                .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.4             octet string
+Column   5 : tmnxHwSerialNumber                  .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.5             octet string
+Column   6 : tmnxHwManufactureDate               .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.6             octet string
+Column   7 : tmnxHwClass                         .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.7             integer32
+Column   8 : tmnxHwName                          .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.8             octet string
+Column  11 : tmnxHwCLEI                          .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.11            octet string
+Column  12 : tmnxHwIsFRU                         .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.12            integer32
+Column  13 : tmnxHwContainedIn                   .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.13            integer32
+Column  14 : tmnxHwParentRelPos                  .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.14            integer32
+Column  15 : tmnxHwAdminState                    .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.15            integer32
+Column  16 : tmnxHwOperState                     .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.16            integer32
+Column  17 : tmnxHwTempSensor                    .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.17            integer32
+Column  18 : tmnxHwTemperature                   .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.18            integer32
+Column  19 : tmnxHwTempThreshold                 .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.19            integer32
+Column  21 : tmnxHwSoftwareCodeVersion           .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.21            octet string
+Column  22 : tmnxHwSwLastBoot                    .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.22            octet string (binary)
+Column  29 : tmnxHwBaseMacAddress                .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.29            octet string (binary)
+Column  30 : tmnxHwFailureReason                 .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.30            octet string
+Column  36 : tmnxHwOverTempStatus                .1.3.6.1.4.1.6527.3.1.2.2.1.8.1.36            integer32
+
+# table tmnxPhysChassisFanTable (.1.3.6.1.4.1.6527.3.1.2.2.1.24.1)
+# config file  : /opt/srlinux/snmp/scripts/timetra_chassis.yaml
+# python-script: /opt/srlinux/snmp/scripts/timetra_chassis.py
+Index    - : tmnxPhysChassisClass                (none)                                        integer32
+Index    - : tmnxPhysChassisNum                  (none)                                        integer32
+Index    1 : tmnxPhysChassisFanIndex             (not-accessible)                              unsigned32
+Column   2 : tmnxPhysChassisFanOperStatus        .1.3.6.1.4.1.6527.3.1.2.2.1.24.1.1.2          integer32
+Column   5 : tmnxPhysChassisFanSpeedPercent      .1.3.6.1.4.1.6527.3.1.2.2.1.24.1.1.5          unsigned32
+
+# table tmnxPhysChassisPMTable (.1.3.6.1.4.1.6527.3.1.2.2.1.24.9)
+# config file  : /opt/srlinux/snmp/scripts/timetra_chassis.yaml
+# python-script: /opt/srlinux/snmp/scripts/timetra_chassis.py
+Index    1 : tmnxPowerModuleHwIndex              (not-accessible)                              integer32
+Column   6 : tmnxPhysChassisPMAvailableWatt      .1.3.6.1.4.1.6527.3.1.2.2.1.24.9.1.6          unsigned32
+Column   7 : tmnxPhysChassisPMOutputStatus       .1.3.6.1.4.1.6527.3.1.2.2.1.24.9.1.7          integer32
+Column   8 : tmnxPhysChassisPMInputFeedDown      .1.3.6.1.4.1.6527.3.1.2.2.1.24.9.1.8          bits (binary)
+Column   9 : tmnxPhysChassisPMFeedAInVolt        .1.3.6.1.4.1.6527.3.1.2.2.1.24.9.1.9          integer32
+Column  10 : tmnxPhysChassisPMFeedBInVolt        .1.3.6.1.4.1.6527.3.1.2.2.1.24.9.1.10         integer32
+
+# table tBgpInstanceTable (.1.3.6.1.4.1.6527.3.1.2.14.2.2)
+# config file  : /opt/srlinux/snmp/scripts/timetra_bgp.yaml
+# python-script: /opt/srlinux/snmp/scripts/timetra_bgp.py
+Index    1 : tBgpInstanceIndex                   (not-accessible)                              integer32
+Column   3 : tBgpInstanceShutdown                .1.3.6.1.4.1.6527.3.1.2.14.2.2.1.3            integer32
+Column   4 : tBgpInstanceDescription             .1.3.6.1.4.1.6527.3.1.2.14.2.2.1.4            octet string
+Column   7 : tBgpInstanceBgpId                   .1.3.6.1.4.1.6527.3.1.2.14.2.2.1.7            ipaddress (binary)
+Column  14 : tBgpInstanceLocalPreference         .1.3.6.1.4.1.6527.3.1.2.14.2.2.1.14           unsigned32
+Column  40 : tBgpInstanceOperStatus              .1.3.6.1.4.1.6527.3.1.2.14.2.2.1.40           integer32
+Column  47 : tBgpInstanceFamily                  .1.3.6.1.4.1.6527.3.1.2.14.2.2.1.47           bits (binary)
+Column  64 : tBgpInstanceLocalAS4Byte            .1.3.6.1.4.1.6527.3.1.2.14.2.2.1.64           unsigned32
+
+# table tBgpPeerGroupTable (.1.3.6.1.4.1.6527.3.1.2.14.3.3)
+# config file  : /opt/srlinux/snmp/scripts/timetra_bgp.yaml
+# python-script: /opt/srlinux/snmp/scripts/timetra_bgp.py
+Index    - : tBgpInstanceIndex                   (none)                                        integer32
+Index    1 : tBgpPeerGroupName                   .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.1            octet string
+Column   1 : tBgpPeerGroupName                   .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.1            octet string
+Column   3 : tBgpPeerGroupShutdown               .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.3            integer32
+Column   4 : tBgpPeerGroupDescription            .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.4            octet string
+Column   5 : tBgpPeerGroupConnectRetry           .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.5            integer32
+Column   6 : tBgpPeerGroupHoldTime               .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.6            integer32
+Column   7 : tBgpPeerGroupKeepAlive              .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.7            integer32
+Column  12 : tBgpPeerGroupLocalPreference        .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.12           unsigned32
+Column  14 : tBgpPeerGroupMinRouteAdvertisement  .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.14           integer32
+Column  24 : tBgpPeerGroupPeerType               .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.24           integer32
+Column  51 : tBgpPeerGroupFamily                 .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.51           bits (binary)
+Column  60 : tBgpPeerGroupLocalAS4Byte           .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.60           unsigned32
+Column  61 : tBgpPeerGroupPeerAS4Byte            .1.3.6.1.4.1.6527.3.1.2.14.3.3.1.61           unsigned32
+
+# table tBgpPeerNgTable (.1.3.6.1.4.1.6527.3.1.2.14.4.7)
+# config file  : /opt/srlinux/snmp/scripts/timetra_bgp.yaml
+# python-script: /opt/srlinux/snmp/scripts/timetra_bgp.py
+Index    1 : tBgpPeerNgInstanceIndex             (not-accessible)                              integer32
+Index    2 : tBgpPeerNgAddressType               (not-accessible)                              integer32
+Index    3 : tBgpPeerNgAddress                   (not-accessible)                              octet string (binary)
+Column   4 : tBgpPeerNgPeerGroup                 .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.4            octet string
+Column   6 : tBgpPeerNgShutdown                  .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.6            integer32
+Column   7 : tBgpPeerNgDescription               .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.7            octet string
+Column   8 : tBgpPeerNgConnectRetry              .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.8            integer32
+Column   9 : tBgpPeerNgHoldTime                  .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.9            integer32
+Column  10 : tBgpPeerNgKeepAlive                 .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.10           integer32
+Column  13 : tBgpPeerNgLocalAddress              .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.13           octet string (binary)
+Column  14 : tBgpPeerNgLocalAddressType          .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.14           integer32
+Column  16 : tBgpPeerNgLocalPreference           .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.16           unsigned32
+Column  18 : tBgpPeerNgMinRouteAdvertisement     .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.18           integer32
+Column  25 : tBgpPeerNgPassive                   .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.25           integer32
+Column  27 : tBgpPeerNgPeerType                  .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.27           integer32
+Column  42 : tBgpPeerNgOperStatus                .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.42           integer32
+Column  53 : tBgpPeerNgFamily                    .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.53           bits (binary)
+Column  59 : tBgpPeerNgConnState                 .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.59           integer32
+Column  65 : tBgpPeerNgLocalAS4Byte              .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.65           unsigned32
+Column  66 : tBgpPeerNgPeerAS4Byte               .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.66           unsigned32
+Column  74 : tBgpPeerNgCreationType              .1.3.6.1.4.1.6527.3.1.2.14.4.7.1.74           integer32
+
+# table tBgpPeerNgOperTable (.1.3.6.1.4.1.6527.3.1.2.14.4.8) - augments tBgpPeerNgTable
+# config file  : /opt/srlinux/snmp/scripts/timetra_bgp.yaml
+# python-script: /opt/srlinux/snmp/scripts/timetra_bgp.py
+Index    - : tBgpPeerNgInstanceIndex             (augmented)                                   integer32
+Index    - : tBgpPeerNgAddressType               (augmented)                                   integer32
+Index    - : tBgpPeerNgAddress                   (augmented)                                   octet string (binary)
+Column   3 : tBgpPeerNgOperInputQueueMsgs        .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.3            unsigned32
+Column   4 : tBgpPeerNgOperOutputQueueMsgs       .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.4            unsigned32
+Column   5 : tBgpPeerNgOperReceivedPrefixes      .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.5            counter32
+Column   6 : tBgpPeerNgOperSentPrefixes          .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.6            counter32
+Column   7 : tBgpPeerNgOperActivePrefixes        .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.7            unsigned32
+Column  10 : tBgpPeerNgOperFlaps                 .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.10           counter32
+Column  11 : tBgpPeerNgOperLastState             .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.11           integer32
+Column  12 : tBgpPeerNgOperLastEvent             .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.12           integer32
+Column  13 : tBgpPeerNgOperVpnRecvPrefixes       .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.13           counter32
+Column  14 : tBgpPeerNgOperVpnSentPrefixes       .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.14           counter32
+Column  15 : tBgpPeerNgOperVpnActivePrefixes     .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.15           unsigned32
+Column  27 : tBgpPeerNgOperV6ReceivedPrefixes    .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.27           counter32
+Column  28 : tBgpPeerNgOperV6SentPrefixes        .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.28           counter32
+Column  29 : tBgpPeerNgOperV6ActivePrefixes      .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.29           unsigned32
+Column  40 : tBgpPeerNgOperVpnIpv6RecvPfxs       .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.40           counter32
+Column  41 : tBgpPeerNgOperVpnIpv6SentPfxs       .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.41           counter32
+Column  42 : tBgpPeerNgOperVpnIpv6ActivePfxs     .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.42           unsigned32
+Column  71 : tBgpPeerNgOperRtTgtRecvPfxs         .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.71           counter32
+Column  72 : tBgpPeerNgOperRtTgtSentPfxs         .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.72           counter32
+Column  73 : tBgpPeerNgOperRtTgtActivePfxs       .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.73           counter32
+Column  88 : tBgpPeerNgOperEvpnRecvPfxs          .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.88           counter32
+Column  89 : tBgpPeerNgOperEvpnSentPfxs          .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.89           counter32
+Column  90 : tBgpPeerNgOperEvpnActivePfxs        .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.90           counter32
+Column  98 : tBgpPeerNgOperIpv4RejPfxs           .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.98           counter32
+Column  99 : tBgpPeerNgOperVpnIpv4RejPfxs        .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.99           counter32
+Column 100 : tBgpPeerNgOperIpv6RejPfxs           .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.100          counter32
+Column 101 : tBgpPeerNgOperVpnIpv6RejPfxs        .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.101          counter32
+Column 108 : tBgpPeerNgOperRtTgtRejPfxs          .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.108          counter32
+Column 112 : tBgpPeerNgOperEvpnRejPfxs           .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.112          counter32
+Column 116 : tBgpPeerNgOperLabelV4RecvPfxs       .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.116          counter32
+Column 117 : tBgpPeerNgOperLabelV4SentPfxs       .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.117          counter32
+Column 118 : tBgpPeerNgOperLabelV4ActivePfxs     .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.118          counter32
+Column 119 : tBgpPeerNgOperLabelV4RejPfxs        .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.119          counter32
+Column 122 : tBgpPeerNgOperLabelV6RecvPfxs       .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.122          counter32
+Column 123 : tBgpPeerNgOperLabelV6SentPfxs       .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.123          counter32
+Column 124 : tBgpPeerNgOperLabelV6ActivePfxs     .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.124          counter32
+Column 125 : tBgpPeerNgOperLabelV6RejPfxs        .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.125          counter32
+Column 161 : tBgpPeerOperLocalAddressType        .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.161          integer32
+Column 162 : tBgpPeerOperLocalAddress            .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.162          octet string (binary)
+Column 163 : tBgpPeerOperRemoteAddressType       .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.163          integer32
+Column 164 : tBgpPeerOperRemoteAddress           .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.164          octet string (binary)
+Column 177 : tBgpPeerFsmEstablishedTime          .1.3.6.1.4.1.6527.3.1.2.14.4.8.1.177          unsigned32
+

@@ -1,0 +1,19 @@
+# Exercise 5: Create a topology mixing network OS and Linux containers.
+
+name: mixed-topo
+
+topology:
+  nodes:
+    # SR Linux node
+    router:
+      kind: srl
+      image: ghcr.io/nokia/srlinux:24.10.1
+
+    # Alpine Linux host
+    host1:
+      kind: linux
+      image: alpine:3.20
+
+  links:
+    # Connect router's ethernet-1/1 to host1's ethernet-1/1
+    - endpoints: ["router:e1-1", "host1:eth1"]

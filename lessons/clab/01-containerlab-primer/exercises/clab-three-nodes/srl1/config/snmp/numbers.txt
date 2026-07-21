@@ -1,0 +1,178 @@
+.1.3.6.1.2.1.1.1                        sysDescr                             LEAF  octet string
+.1.3.6.1.2.1.1.2                        sysObjectID                          LEAF  object identifier
+.1.3.6.1.2.1.1.3                        sysUpTime                            LEAF  timeticks
+.1.3.6.1.2.1.1.4                        sysContact                           LEAF  octet string
+.1.3.6.1.2.1.1.5                        sysName                              LEAF  octet string
+.1.3.6.1.2.1.1.6                        sysLocation                          LEAF  octet string
+.1.3.6.1.2.1.1.7                        sysServices                          LEAF  integer32
+.1.3.6.1.2.1.1.8                        sysORLastChange                      LEAF  timeticks
+.1.3.6.1.2.1.1.9                        sysORTable                           NODE
+.1.3.6.1.2.1.1.9.1.2                    sysORID                              LEAF  object identifier
+.1.3.6.1.2.1.1.9.1.3                    sysORDescr                           LEAF  octet string
+.1.3.6.1.2.1.1.9.1.4                    sysORUpTime                          LEAF  timeticks
+.1.3.6.1.2.1.2.1                        ifNumber                             LEAF  integer32
+.1.3.6.1.2.1.2.2                        ifTable                              NODE
+.1.3.6.1.2.1.2.2.1.1                    ifIndex                              LEAF  integer32
+.1.3.6.1.2.1.2.2.1.2                    ifDescr                              LEAF  octet string
+.1.3.6.1.2.1.2.2.1.3                    ifType                               LEAF  integer32
+.1.3.6.1.2.1.2.2.1.4                    ifMtu                                LEAF  integer32
+.1.3.6.1.2.1.2.2.1.5                    ifSpeed                              LEAF  unsigned32
+.1.3.6.1.2.1.2.2.1.6                    ifPhysAddress                        LEAF  octet string
+.1.3.6.1.2.1.2.2.1.7                    ifAdminStatus                        LEAF  integer32
+.1.3.6.1.2.1.2.2.1.8                    ifOperStatus                         LEAF  integer32
+.1.3.6.1.2.1.2.2.1.9                    ifLastChange                         LEAF  timeticks
+.1.3.6.1.2.1.2.2.1.10                   ifInOctets                           LEAF  counter32
+.1.3.6.1.2.1.2.2.1.11                   ifInUcastPkts                        LEAF  counter32
+.1.3.6.1.2.1.2.2.1.12                   ifInNUcastPkts                       LEAF  counter32
+.1.3.6.1.2.1.2.2.1.13                   ifInDiscards                         LEAF  counter32
+.1.3.6.1.2.1.2.2.1.14                   ifInErrors                           LEAF  counter32
+.1.3.6.1.2.1.2.2.1.15                   ifInUnknownProtos                    LEAF  counter32
+.1.3.6.1.2.1.2.2.1.16                   ifOutOctets                          LEAF  counter32
+.1.3.6.1.2.1.2.2.1.17                   ifOutUcastPkts                       LEAF  counter32
+.1.3.6.1.2.1.2.2.1.18                   ifOutNUcastPkts                      LEAF  counter32
+.1.3.6.1.2.1.2.2.1.19                   ifOutDiscards                        LEAF  counter32
+.1.3.6.1.2.1.2.2.1.20                   ifOutErrors                          LEAF  counter32
+.1.3.6.1.2.1.2.2.1.21                   ifOutQLen                            LEAF  unsigned32
+.1.3.6.1.2.1.2.2.1.22                   ifSpecific                           LEAF  object identifier
+.1.3.6.1.2.1.31.1.1                     ifXTable                             NODE
+.1.3.6.1.2.1.31.1.1.1.1                 ifName                               LEAF  octet string
+.1.3.6.1.2.1.31.1.1.1.2                 ifInMulticastPkts                    LEAF  counter32
+.1.3.6.1.2.1.31.1.1.1.3                 ifInBroadcastPkts                    LEAF  counter32
+.1.3.6.1.2.1.31.1.1.1.4                 ifOutMulticastPkts                   LEAF  counter32
+.1.3.6.1.2.1.31.1.1.1.5                 ifOutBroadcastPkts                   LEAF  counter32
+.1.3.6.1.2.1.31.1.1.1.6                 ifHcInOctets                         LEAF  counter64
+.1.3.6.1.2.1.31.1.1.1.7                 ifHcInUcastPkts                      LEAF  counter64
+.1.3.6.1.2.1.31.1.1.1.8                 ifHcInMulticastPkts                  LEAF  counter64
+.1.3.6.1.2.1.31.1.1.1.9                 ifHcInBroadcastPkts                  LEAF  counter64
+.1.3.6.1.2.1.31.1.1.1.10                ifHcOutOctets                        LEAF  counter64
+.1.3.6.1.2.1.31.1.1.1.11                ifHcOutUcastPkts                     LEAF  counter64
+.1.3.6.1.2.1.31.1.1.1.12                ifHcOutMulticastPkts                 LEAF  counter64
+.1.3.6.1.2.1.31.1.1.1.13                ifHcOutBroadcastPkts                 LEAF  counter64
+.1.3.6.1.2.1.31.1.1.1.14                ifLinkUpDownTrapEnable               LEAF  integer32
+.1.3.6.1.2.1.31.1.1.1.15                ifHighSpeed                          LEAF  unsigned32
+.1.3.6.1.2.1.31.1.1.1.16                ifPromiscuousMode                    LEAF  integer32
+.1.3.6.1.2.1.31.1.1.1.17                ifConnectorPresent                   LEAF  integer32
+.1.3.6.1.2.1.31.1.1.1.18                ifAlias                              LEAF  octet string
+.1.3.6.1.2.1.31.1.1.1.19                ifCounterDiscontinuityTime           LEAF  timeticks
+.1.3.6.1.2.1.31.1.2                     ifStackTable                         NODE
+.1.3.6.1.2.1.31.1.2.1.3                 ifStackStatus                        LEAF  integer32
+.1.3.6.1.2.1.31.1.5                     ifTableLastChange                    LEAF  timeticks
+.1.3.6.1.4.1.6527.3.1.2.1.1.1           sgiCpuUsage                          LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.1.1.2           sgiMemoryUsed                        LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.1.1.3           sgiMemoryAvailable                   LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.1.1.9           sgiKbMemoryUsed                      LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.1.1.10          sgiKbMemoryAvailable                 LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.2.1.8           tmnxHwTable                          NODE
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.2       tmnxHwID                             LEAF  object identifier
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.3       tmnxHwMfgString                      LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.4       tmnxHwMfgBoardNumber                 LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.5       tmnxHwSerialNumber                   LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.6       tmnxHwManufactureDate                LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.7       tmnxHwClass                          LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.8       tmnxHwName                           LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.11      tmnxHwCLEI                           LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.12      tmnxHwIsFRU                          LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.13      tmnxHwContainedIn                    LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.14      tmnxHwParentRelPos                   LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.15      tmnxHwAdminState                     LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.16      tmnxHwOperState                      LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.17      tmnxHwTempSensor                     LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.18      tmnxHwTemperature                    LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.19      tmnxHwTempThreshold                  LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.21      tmnxHwSoftwareCodeVersion            LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.22      tmnxHwSwLastBoot                     LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.29      tmnxHwBaseMacAddress                 LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.30      tmnxHwFailureReason                  LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.2.1.8.1.36      tmnxHwOverTempStatus                 LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.24.1        tmnxPhysChassisFanTable              NODE
+.1.3.6.1.4.1.6527.3.1.2.2.1.24.1.1.2    tmnxPhysChassisFanOperStatus         LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.24.1.1.5    tmnxPhysChassisFanSpeedPercent       LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.2.1.24.9        tmnxPhysChassisPMTable               NODE
+.1.3.6.1.4.1.6527.3.1.2.2.1.24.9.1.6    tmnxPhysChassisPMAvailableWatt       LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.2.1.24.9.1.7    tmnxPhysChassisPMOutputStatus        LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.24.9.1.8    tmnxPhysChassisPMInputFeedDown       LEAF  bits
+.1.3.6.1.4.1.6527.3.1.2.2.1.24.9.1.9    tmnxPhysChassisPMFeedAInVolt         LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.2.1.24.9.1.10   tmnxPhysChassisPMFeedBInVolt         LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.2.2          tBgpInstanceTable                    NODE
+.1.3.6.1.4.1.6527.3.1.2.14.2.2.1.3      tBgpInstanceShutdown                 LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.2.2.1.4      tBgpInstanceDescription              LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.14.2.2.1.7      tBgpInstanceBgpId                    LEAF  ipaddress
+.1.3.6.1.4.1.6527.3.1.2.14.2.2.1.14     tBgpInstanceLocalPreference          LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.2.2.1.40     tBgpInstanceOperStatus               LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.2.2.1.47     tBgpInstanceFamily                   LEAF  bits
+.1.3.6.1.4.1.6527.3.1.2.14.2.2.1.64     tBgpInstanceLocalAS4Byte             LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.3.3          tBgpPeerGroupTable                   NODE
+.1.3.6.1.4.1.6527.3.1.2.14.3.3.1.1      tBgpPeerGroupName                    LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.14.3.3.1.3      tBgpPeerGroupShutdown                LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.3.3.1.4      tBgpPeerGroupDescription             LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.14.3.3.1.5      tBgpPeerGroupConnectRetry            LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.3.3.1.6      tBgpPeerGroupHoldTime                LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.3.3.1.7      tBgpPeerGroupKeepAlive               LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.3.3.1.12     tBgpPeerGroupLocalPreference         LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.3.3.1.14     tBgpPeerGroupMinRouteAdvertisement   LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.3.3.1.24     tBgpPeerGroupPeerType                LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.3.3.1.51     tBgpPeerGroupFamily                  LEAF  bits
+.1.3.6.1.4.1.6527.3.1.2.14.3.3.1.60     tBgpPeerGroupLocalAS4Byte            LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.3.3.1.61     tBgpPeerGroupPeerAS4Byte             LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7          tBgpPeerNgTable                      NODE
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.4      tBgpPeerNgPeerGroup                  LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.6      tBgpPeerNgShutdown                   LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.7      tBgpPeerNgDescription                LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.8      tBgpPeerNgConnectRetry               LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.9      tBgpPeerNgHoldTime                   LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.10     tBgpPeerNgKeepAlive                  LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.13     tBgpPeerNgLocalAddress               LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.14     tBgpPeerNgLocalAddressType           LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.16     tBgpPeerNgLocalPreference            LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.18     tBgpPeerNgMinRouteAdvertisement      LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.25     tBgpPeerNgPassive                    LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.27     tBgpPeerNgPeerType                   LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.42     tBgpPeerNgOperStatus                 LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.53     tBgpPeerNgFamily                     LEAF  bits
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.59     tBgpPeerNgConnState                  LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.65     tBgpPeerNgLocalAS4Byte               LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.66     tBgpPeerNgPeerAS4Byte                LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.4.7.1.74     tBgpPeerNgCreationType               LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8          tBgpPeerNgOperTable                  NODE
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.3      tBgpPeerNgOperInputQueueMsgs         LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.4      tBgpPeerNgOperOutputQueueMsgs        LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.5      tBgpPeerNgOperReceivedPrefixes       LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.6      tBgpPeerNgOperSentPrefixes           LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.7      tBgpPeerNgOperActivePrefixes         LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.10     tBgpPeerNgOperFlaps                  LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.11     tBgpPeerNgOperLastState              LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.12     tBgpPeerNgOperLastEvent              LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.13     tBgpPeerNgOperVpnRecvPrefixes        LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.14     tBgpPeerNgOperVpnSentPrefixes        LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.15     tBgpPeerNgOperVpnActivePrefixes      LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.27     tBgpPeerNgOperV6ReceivedPrefixes     LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.28     tBgpPeerNgOperV6SentPrefixes         LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.29     tBgpPeerNgOperV6ActivePrefixes       LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.40     tBgpPeerNgOperVpnIpv6RecvPfxs        LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.41     tBgpPeerNgOperVpnIpv6SentPfxs        LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.42     tBgpPeerNgOperVpnIpv6ActivePfxs      LEAF  unsigned32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.71     tBgpPeerNgOperRtTgtRecvPfxs          LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.72     tBgpPeerNgOperRtTgtSentPfxs          LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.73     tBgpPeerNgOperRtTgtActivePfxs        LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.88     tBgpPeerNgOperEvpnRecvPfxs           LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.89     tBgpPeerNgOperEvpnSentPfxs           LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.90     tBgpPeerNgOperEvpnActivePfxs         LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.98     tBgpPeerNgOperIpv4RejPfxs            LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.99     tBgpPeerNgOperVpnIpv4RejPfxs         LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.100    tBgpPeerNgOperIpv6RejPfxs            LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.101    tBgpPeerNgOperVpnIpv6RejPfxs         LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.108    tBgpPeerNgOperRtTgtRejPfxs           LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.112    tBgpPeerNgOperEvpnRejPfxs            LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.116    tBgpPeerNgOperLabelV4RecvPfxs        LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.117    tBgpPeerNgOperLabelV4SentPfxs        LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.118    tBgpPeerNgOperLabelV4ActivePfxs      LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.119    tBgpPeerNgOperLabelV4RejPfxs         LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.122    tBgpPeerNgOperLabelV6RecvPfxs        LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.123    tBgpPeerNgOperLabelV6SentPfxs        LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.124    tBgpPeerNgOperLabelV6ActivePfxs      LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.125    tBgpPeerNgOperLabelV6RejPfxs         LEAF  counter32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.161    tBgpPeerOperLocalAddressType         LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.162    tBgpPeerOperLocalAddress             LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.163    tBgpPeerOperRemoteAddressType        LEAF  integer32
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.164    tBgpPeerOperRemoteAddress            LEAF  octet string
+.1.3.6.1.4.1.6527.3.1.2.14.4.8.1.177    tBgpPeerFsmEstablishedTime           LEAF  unsigned32

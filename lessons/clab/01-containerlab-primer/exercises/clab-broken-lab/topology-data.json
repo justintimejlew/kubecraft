@@ -1,0 +1,101 @@
+{
+  "name": "broken-lab",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-3aa48b95fe0c",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMKxz9DU7TvF3tNqJ7W2hgf7MntEGpLtpqoDUqyi+WYC"],
+  "nodes": {
+    "srl1": {
+      "index": "0",
+      "shortname": "srl1",
+      "longname": "clab-broken-lab-srl1",
+      "fqdn": "srl1.broken-lab.io",
+      "group": "",
+      "labdir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-broken-lab/srl1",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:06:00:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3aa48b95fe0c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-broken-lab/srl1",
+        "clab-node-longname": "clab-broken-lab-srl1",
+        "clab-node-name": "srl1",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "jlew",
+        "clab-topo-file": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/broken-topologoy.clab.yml",
+        "containerlab": "broken-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "srl2": {
+      "index": "1",
+      "shortname": "srl2",
+      "longname": "clab-broken-lab-srl2",
+      "fqdn": "srl2.broken-lab.io",
+      "group": "",
+      "labdir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-broken-lab/srl2",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:1b:01:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3aa48b95fe0c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/clab-broken-lab/srl2",
+        "clab-node-longname": "clab-broken-lab-srl2",
+        "clab-node-name": "srl2",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "jlew",
+        "clab-topo-file": "/home/jlew/Documents/GitHub/kubecraft/lessons/clab/01-containerlab-primer/exercises/broken-topologoy.clab.yml",
+        "containerlab": "broken-lab"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "srl1",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:5b:4b:e4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "srl2",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:9e:95:8e",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

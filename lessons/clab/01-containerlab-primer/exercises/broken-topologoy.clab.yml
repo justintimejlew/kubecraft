@@ -1,0 +1,14 @@
+name: broken-lab
+
+topology:
+  nodes:
+    srl1:
+      kind: srl
+      image: ghcr.io/nokia/srlinux:24.10.1
+
+    srl2:
+      kind: srl
+      image: ghcr.io/nokia/srlinux:24.10.1
+
+  links: 
+    - endpoints: ["srl1:e1-1", "srl2:e1-1"]
