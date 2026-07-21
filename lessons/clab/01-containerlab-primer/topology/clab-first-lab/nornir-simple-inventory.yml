@@ -1,0 +1,11 @@
+---
+srl1:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.2
+srl2:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.3
