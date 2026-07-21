@@ -1,37 +1,32 @@
-[1m╭[0m[1m─────────────────────[0m[1m┬[0m[1m───────────────────────────────[0m[1m┬[0m[1m─────────[0m[1m┬[0m[1m───────────────────[0m[1m╮[0m
-[1m│[0m[1m         Name        [0m[1m│[0m[1m           Kind/Image          [0m[1m│[0m[1m  State  [0m[1m│[0m[1m   IPv4/6 Address  [0m[1m│[0m
-[1m├[0m[1m─────────────────────[0m[1m┼[0m[1m───────────────────────────────[0m[1m┼[0m[1m─────────[0m[1m┼[0m[1m───────────────────[0m[1m┤[0m
+## Output of containerlab inspect
+╭─────────────────────┬───────────────────────────────┬─────────┬───────────────────╮
+│         Name        │           Kind/Image          │  State  │   IPv4/6 Address  │
+├─────────────────────┼───────────────────────────────┼─────────┼───────────────────┤
 │ clab-first-lab-srl1 │ srl                           │ running │ 172.20.20.2       │
 │                     │ ghcr.io/nokia/srlinux:24.10.1 │         │ 3fff:172:20:20::2 │
 ├─────────────────────┼───────────────────────────────┼─────────┼───────────────────┤
 │ clab-first-lab-srl2 │ srl                           │ running │ 172.20.20.3       │
 │                     │ ghcr.io/nokia/srlinux:24.10.1 │         │ 3fff:172:20:20::3 │
 ╰─────────────────────┴───────────────────────────────┴─────────┴───────────────────╯
-7[r[999;999H[6n8
+
+## Output of SR Linux Version:
+------------------------------------------------
 Hostname             : srl1
-Chassis Type         : 7220
-                       IXR-D2L
-Part Number          : Sim Part
-                       No.
-Serial Number        : Sim Serial
-                       No.
-System HW MAC Address: 1A:8A:00:F
-                       F:00:00
+Chassis Type         : 7220 IXR-D2L
+Part Number          : Sim Part No.
+Serial Number        : Sim Serial No.
+System HW MAC Address: 1A:8A:00:FF:00:00
 OS                   : SR Linux
 Software Version     : v24.10.1
-Build Number         : 492-
-                       gf8858c583
-                       6
+Build Number         : 492-gf8858c5836
 Architecture         : x86_64
-Last Booted          : 2026-07-
-                       21T14:42:1
-                       9.096Z
-Total Memory         : 23766324
-                       kB
-Free Memory          : 12811539
-                       kB
+Last Booted          : 2026-07-21T14:42:19.096Z
+Total Memory         : 23766324 kB
+Free Memory          : 11988222 kB
+------------------------------------------------
 
-7[r[999;999H[6n8+---------------------+----------+----------+----------+----------+----------+
+## Output of Interfaces
++---------------------+----------+----------+----------+----------+----------+
 |        Port         |  Admin   |   Oper   |  Speed   |   Type   | Descript |
 |                     |  State   |  State   |          |          |   ion    |
 +=====================+==========+==========+==========+==========+==========+
@@ -96,4 +91,4 @@ Free Memory          : 12811539
 | mgmt0               | enable   | up       | 1G       |          |          |
 +---------------------+----------+----------+----------+----------+----------+
 
-The reason why ethernet-1/1 is showing oper: up is because we have included the link in our topology file that was used to deploy this environment
+The reason why ethernet-1/1 is showing Oper State: up is because we have included the link in our topology file that was used to deploy this environment
