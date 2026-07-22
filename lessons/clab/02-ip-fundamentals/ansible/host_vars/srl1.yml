@@ -6,3 +6,6 @@ interfaces:
   - name: ethernet-1/2
     ipv4_address: 10.1.2.1/24
     description: Link to srl2
+  - name: lo0
+    ipv4_address: 10.10.10.1/32
+    description: Loopback for management
